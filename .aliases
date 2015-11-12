@@ -19,3 +19,6 @@ alias chromium="open -a chromium"
 alias safari="open -a safari"
 alias firefox="open -a firefox"
 alias f='open -a Finder'
+
+# Logger shortcuts
+alias log-apache='tail -f /var/log/apache2/error_log'
