@@ -12,6 +12,9 @@ Heavily inspired on and shamelessly stolen from [addyosmani](https://github.com/
 - `.extra`
 - `.functions`
 
+#### git stuff
+- `.gitignore`
+
 #### coding stuff
 - `.editorconfig` (see [editorconfig.org](http://editorconfig.org/)])
 - `.eslint` (lint like it's 2015!)
