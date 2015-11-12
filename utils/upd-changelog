@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Get latest tag (which REALLY should be nothing else but the last release's version)
+LATEST_TAG=$(git describe `git rev-list --tags --max-count=1`)
+
+# Retrieve current release version
+CURRENT_VERSION=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/' | sed -e 's/^release\/\(.*\)/\1/')
+
+echo "Updating CHANGELOG for $CURRENT_VERSION"
+
+# Gets all commit messages since last tag (which REALLY should be the last version!)
+# and write them into temporary changelog file
+echo "# Release $CURRENT_VERSION" > ./CHANGELOG_upd
+echo "" >> ./CHANGELOG_upd
+git log $LATEST_TAG..HEAD --oneline | sed 's/^\(.*\)$/- \1/' >> ./CHANGELOG_upd
+echo "" >> ./CHANGELOG_upd
+# Ensure, there's an old changelog file
+touch ./CHANGELOG.md
+# Append the old changelog file's contents
+cat ./CHANGELOG.md >> ./CHANGELOG_upd
+# Replace olf changelog file
+mv ./CHANGELOG_upd ./CHANGELOG.md
