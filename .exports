@@ -1,0 +1,6 @@
+# The following are extensions primarily for use in combination with Git
+export CLICOLOR='true'
+export LSCOLORS="gxfxcxdxbxCgCdabagacad"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"

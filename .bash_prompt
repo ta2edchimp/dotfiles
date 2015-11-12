@@ -1,0 +1,17 @@
+# Whether there are changes ... or not.
+function parse_git_dirty() {
+	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "[*]"
+}
+
+# Git branch in good-looking prompt.
+function parse_git_branch() {
+	# git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ ⑆ \1/'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ ⑆ \1$(parse_git_dirty)/"
+}
+
+# Prompt with Git branch
+# Explanation of the weird lines: \u Username, \h Host, \w Path
+export PS1='\[\e[38;5;14m\]\u@\h \[\e[38;5;147m\]×\[\e[38;5;220m\] \W\[\e[38;5;147m\]$(parse_git_branch)\[\e[0m\] $ '
+# Colors: http://ascii-table.com/ansi-escape-sequences.php & http://bitmote.com/index.php?post/2012/11/19/Using-ANSI-Color-Codes-to-Colorize-Your-Bash-Prompt-on-Linux 
+# http://code.tutsplus.com/tutorials/how-to-customize-the-command-prompt--net-20586
+# http://makandracards.com/makandra/1090-customize-your-bash-prompt
