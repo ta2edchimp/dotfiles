@@ -17,7 +17,7 @@ Heavily inspired on and shamelessly stolen from [addyosmani](https://github.com/
 
 #### coding stuff
 - `.editorconfig` (see [editorconfig.org](http://editorconfig.org/))
-- `.eslint` (lint like it's 2015!)
+- `.eslintrc` (lint like it's 2015!)
 
 ## installation
 
