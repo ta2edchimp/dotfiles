@@ -1,4 +1,4 @@
-# Aliases dotfile 
+# Aliases dotfile
 # inspired by https://github.com/addyosmani/dotfiles/blob/master/.aliases
 
 # Easier navigation
@@ -9,8 +9,8 @@ alias ~="cd ~" # `cd` is probably faster to type though
 # Navigation shortcuts
 alias cddl="cd ~/Downloads"
 alias cddt="cd ~/Desktop"
-alias cdp="cd ~/Documents/Projekte"
-alias prj="cd ~/Documents/Projekte"
+alias cdp="cd ~/Projects"
+alias prj="cd ~/Projects"
 
 # Application shortcuts
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
