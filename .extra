@@ -1,3 +1,13 @@
-export PATH=${PATH}:~/Utils:/usr/local
+export PATH=${PATH}:~/Utils:/usr/local:~/Applications/Development/TEE-CLC
 export ANT_HOME=~/Applications/Development/ant/
 export NODE_PATH=/usr/local/lib/node_modules/
+
+# Team Explorer Everywhere Stuff
+#
+# Add TEE folder to global PATH env var
+export PATH=${PATH}:~/Applications/Development/TEE-CLC
+# Save credentials to cache, after being entered once
+export TF_AUTO_SAVE_CREDENTIALS=1
+# Old trick: Use git diff view for TEE
+# (forcing colored output, according to global git config)
+export TF_DIFF_COMMAND="git diff --color %1 %2"
