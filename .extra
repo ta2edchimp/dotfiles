@@ -1,6 +1,11 @@
-export PATH=${PATH}:~/Utils:/usr/local:~/Applications/Development/TEE-CLC
+export PATH=${PATH}:~/Utils:/usr/local
 export ANT_HOME=~/Applications/Development/ant/
 export NODE_PATH=/usr/local/lib/node_modules/
+
+# Android SDK Stuff
+#
+# Add folders to global PATH env var
+export PATH=${PATH}:~/Applications/Development/adt-bundle-mac-x86_64-20140321/sdk/platform-tools:~/Applications/Development/adt-bundle-mac-x86_64-20140321/sdk/tools:~/Applications/Development/ant/bin
 
 # Team Explorer Everywhere Stuff
 #
