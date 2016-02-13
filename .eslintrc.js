@@ -1,6 +1,18 @@
 /* eslint-env node */
 /* eslint quote-props: [2, "always"] */
 module.exports = {
+  'extends': 'eslint:recommended',
+  'env': {
+    'es6': true,
+    'browser': true
+  },
+  'parserOptions': {
+    'ecmaVersion': 6,
+    'ecmaFeatures': {
+      'experimentalObjectRestSpread': true,
+      'jsx': true
+    }
+  },
   'rules': {
     'no-console': 1,
     'no-extra-parens': [2, 'all'],
@@ -110,17 +122,5 @@ module.exports = {
     'prefer-const': 1,
     'prefer-spread': 1,
     'require-yield': 2
-  },
-  'env': {
-    'es6': true,
-    'browser': true
-  },
-  'extends': 'eslint:recommended',
-  'ecmaFeatures': {
-    'blockBindings': true,
-    'experimentalObjectRestSpread': true,
-    'jsx': true,
-    'modules': true,
-    'spread': true
   }
 };
