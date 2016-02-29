@@ -11,6 +11,7 @@ alias cddl="cd ~/Downloads"
 alias cddt="cd ~/Desktop"
 alias cdp="cd ~/Projects"
 alias prj="cd ~/Projects"
+alias cdpg="cd ~/Projects/github"
 
 # Application shortcuts
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
